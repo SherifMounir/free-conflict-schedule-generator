@@ -1,0 +1,76 @@
+:root {
+    --base_color: #007c53;
+    --base_color_loader: #007c53;
+    --default_color: #007c53;
+    --main-block-color: #fff;
+    --background-color: #ebeff2;
+
+    --svg_fill_color: white;
+    --loader_page_color: #3699FF;
+    --loader_conatiner-content: rgb(255 255 255 / 86%);
+    --block_content_color: #fff;
+    --gray_color: rgb(235, 239, 242);
+    --gray_color_2: rgb(244, 246, 248);
+    --data_menu_color: rgb(0, 0, 0);
+    --data_header_color: rgb(103, 103, 103);
+    --data_text_color: rgb(103, 103, 103);
+    --success_color: #185D34;
+    --warning_color: #FCE173;
+    --danger_color: rgb(199, 7, 46);
+    --isLoading: #007c53;
+    --isLoading-bg: hsla(0, 0%, 100%, 0.75);
+    --default_color-button: #007c53;
+    --calendar_color_border: rgb(235, 239, 242);
+    --calendar_color_day: rgb(235, 239, 242);
+    --calendar_data_color: rgb(103, 103, 103);
+    --dropdown-menu-color: rgb(255, 255, 255);
+    --dropdown-menu-color-arrow: rgb(255, 255, 255);
+    --dropdown-menu-color-hover: rgb(235, 239, 242);
+    --dropdown-menu-color-border: rgb(235, 239, 242);
+    --input-border-color: rgb(220, 223, 230);
+    --input-background-color: rgb(255, 255, 255);
+    --input-text-color: rgb(96, 98, 102);
+    --input-placeholder-color: #999;
+    --advanced-search-bg-color: rgb(235, 239, 242);
+    --advanced-head-search-bg-color: #f5f6f7;
+    --background_hover_menu: rgb(229 233 235);
+    --background-dropdown-color: white;
+}
+[theme="dark"] {
+    --base_color: rgb(76, 82, 187);
+    --base_color_loader: rgb(255, 255, 255);
+    --default_color: rgb(31, 31, 31);
+    --main-block-color: #222324;
+    --background-color: rgb(42, 43, 44);
+
+    --svg_fill_color: rgb(165, 165, 165);
+    --loader_page_color: rgb(252, 225, 115);
+    --loader_conatiner-content: rgb(31 31 31 / 87%);
+    --block_content_color: #222324;
+    --gray_color: #222324;
+    --gray_color_2: rgb(42, 43, 44);
+    --data_menu_color: rgb(169, 169, 169);
+    --data_text_color: rgb(169, 169, 169);
+    --success_color: #185D34;
+    --warning_color: #FCE173;
+    --danger_color: rgb(199, 7, 46);
+    --isLoading: rgb(169, 169, 169);
+    --isLoading-bg: rgba(42, 43, 44, 0.86);
+    --default_color-button: rgb(76, 82, 187);
+    --data_header_color: rgb(169, 169, 169);
+    --calendar_color_border: rgb(42, 43, 44);
+    --calendar_color_day: rgb(42, 43, 44);
+    --calendar_data_color: rgb(169, 169, 169);
+    --dropdown-menu-color: rgb(31, 31, 31);
+    --dropdown-menu-color-arrow: rgb(31, 31, 31);
+    --dropdown-menu-color-hover: rgb(42, 43, 44);
+    --dropdown-menu-color-border: rgb(42, 43, 44);
+    --input-border-color: rgb(53, 53, 53);
+    --input-background-color: rgb(42, 43, 44);
+    --input-text-color: rgb(169, 169, 169);
+    --input-placeholder-color: rgb(96, 98, 102);
+    --advanced-search-bg-color: rgb(31, 31, 31);
+    --advanced-head-search-bg-color: rgb(39, 39, 39);
+    --background_hover_menu: rgb(31 31 31);
+    --background-dropdown-color: rgb(31, 31, 31);
+}

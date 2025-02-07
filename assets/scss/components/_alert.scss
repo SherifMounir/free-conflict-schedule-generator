@@ -1,0 +1,131 @@
+.alert {
+    margin: 0px 0px;
+    padding: 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.alert:before {
+    padding-right: 12px;
+}
+
+.alert-info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    border: 1px solid darken(#BDE5F8, 15%);
+}
+
+.alert-info:before {
+    content: '\f05a';
+    font-family: bootstrap-icons !important;
+}
+
+.alert-warn {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    border: 1px solid darken(#FEEFB3, 15%);
+}
+
+.alert-warn:before {
+    content: '\f071';
+    font-family: bootstrap-icons !important;
+}
+
+.alert-danger {
+    color: var(--danger_color);
+    background-color: #FFBABA;
+    border: 1px solid darken(#FFBABA, 15%);
+    
+}
+
+.alert-danger:before {
+    content: '\F622';
+    font-family: bootstrap-icons !important;
+}
+
+.alert-success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    border: 1px solid darken(#DFF2BF, 15%);
+}
+
+.alert-success:before {
+    content: '\F26B';
+    font-family: bootstrap-icons !important;
+}
+
+.swal2-popup {
+    @include border-radius();
+    .swal2-actions {
+        .swal2-styled {
+            border-radius: 5px !important;
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+.swal2-title {
+    text-transform: capitalize !important;
+    font-size: 1.2em;
+}
+
+.swal2-html-container {
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+.success-toast {
+    .swal2-toast {
+      i {
+        color: var(--base_color);
+      }
+      &::after {
+        background-color: var(--base_color);
+      }
+      .swal2-timer-progress-bar-container {
+        .swal2-timer-progress-bar {
+          background: var(--base_color);
+        }
+      }
+    }
+    
+  }
+  .error-toast {
+    .swal2-toast {
+      i {
+        color: var(--danger_color) !important;
+      }
+      &::after {
+        background-color: var(--danger_color);
+      }
+      .swal2-timer-progress-bar-container {
+        .swal2-timer-progress-bar {
+          background: var(--danger_color);
+        }
+      }
+    }
+    
+  }
+  .swal2-toast {
+    border-radius: 0px !important;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 100%;
+      }
+    .swal2-title {
+      font-size: 13px !important;
+  
+    }
+    .swal2-icon {
+      border: 0px;
+    }
+  }

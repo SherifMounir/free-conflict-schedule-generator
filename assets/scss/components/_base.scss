@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+.h-full {
+    height: 100dvh;
+}
+// #__nuxt {
+//     height: 100dvh;
+//     #__layout {
+//         height: 100dvh;
+//     }
+// }
+
+.checkbox-group {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 1.2rem;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.checkbox-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+
+/* On mouse-over, ticket a grey background color */
+
+.checkbox-group:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, ticket a blue background */
+.checkbox-group  {
+    input:checked~.checkmark {
+        background-color: var(--base_color);
+    }
+    input:disabled~.checkmark{
+        background-color: var(--base_color);
+        filter: opacity(0.5);
+    }
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkbox-group input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkbox-group .checkmark:after {
+    left: 10px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.badge-primary {
+    background-color: var(--base_color);
+    color: #fff;
+}
+
+
+
+
+.dropdown-menu.show {
+    display: block;
+    border: 0px !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 6px !important;
+    a {
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+    hr {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+}
+
+.b-dropdown {
+    .list-group-item {
+        border-top: 1px solid var(--gray_color_2);
+        border-bottom: 0px;
+    }
+    .border-top {
+        border-top: 1px solid var(--gray_color_2) !important;
+
+    }
+    .notification {
+        .list-notifications {
+            max-height: 400px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+    button[aria-expanded="true"] {
+        background-color: var(--gray_color_2) !important;
+        border: 0 !important;
+        &:hover {
+            background-color: var(--background-dropdown-color) !important;;
+        }
+    }
+    .dropdown-item {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .dropdown-divider {
+        opacity: 0.2;
+    }
+}
+
+
+.multiselect {
+    border-radius: 5px;
+    text-transform: capitalize;
+    min-height: 44px !important;
+    .multiselect--active:not(.multiselect--above) .multiselect__current,
+    .multiselect--active:not(.multiselect--above) .multiselect__input,
+    .multiselect--active:not(.multiselect--above) .multiselect__tags {
+        border-bottom-left-radius: 5px !important;
+        border-bottom-right-radius: 5px !important;
+        min-height: 44px !important;
+    }
+    .multiselect__select, .multiselect__spinner {
+        min-height: 38px;
+        right: 3px;
+        top: 3px;
+        border-radius: 5px;
+    }
+}
+
+
+.multiselect__tags {
+    min-height: 44px !important;
+    font-size: 14px !important;
+    padding-left: 11px !important;
+    color: var(--data_menu_color);
+    transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+    background-color: var(--input-background-color) !important;
+    border: 2px solid var(--input-border-color) !important;
+    box-shadow: unset;
+    padding: 10px 40px 0 8px !important;
+    &:focus {
+        color: var(--data_menu_color);
+        transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+        background-color: var(--input-background-color) !important;
+        border: 1px solid var(--input-border-color) !important;
+        box-shadow: unset;
+    }
+    .multiselect__placeholder {
+        margin-bottom: 0px !important;
+        padding-top: 0px !important;
+        font-size: 14px !important;
+        color: #999 !important;
+    }    
+}
+
+.multiselect__input,
+.multiselect__single,
+.multiselect--disabled {
+    font-size: 14px !important;
+    background-color: var(--input-background-color) !important;
+    color: var(--data_menu_color);
+}
+
+.multiselect--active {
+    background-color: transparent;
+    border-color: #86b7fe;
+    outline: 0;
+    border-radius: 5px !important;
+}
+
+.multiselect__content-wrapper {
+    position: absolute;
+    display: block;
+    background: var(--input-background-color) !important;
+    width: 100%;
+    max-height: 240px;
+    overflow: auto;
+    border: 2px solid var(--input-border-color) !important;
+    border-radius: 5px;
+    z-index: 50;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 5px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.multiselect__option--highlight,
+.multiselect__option--highlight:after,
+.multiselect__option--highlight:hover,
+.multiselect__option--highlight:hover:after {
+    background: #4c52bb !important;
+}
+
+.multiselect__option--selected,
+.multiselect__option--selected:after {
+    background: #f5f6ff !important;
+    color: #fff;
+}
+.multiselect {
+    color: var(--input-text-color) !important;
+}
+
+.multiselect__option--selected.multiselect__option--highlight,
+.multiselect__option--selected.multiselect__option--highlight:after {
+    color: #000 !important;
+}
+
+.multiselect__option--selected.multiselect__option--highlight:hover {
+    color: #fff !important;
+    &:after {
+        color: #fff !important;
+    }
+}
+
+.multiselect__option {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.multiselect__option:after {
+    font-size: 12px;
+}
+
+.default-color {
+    color: var(--base_color);
+}
+
+
+html[dir*="rtl"] {
+    .list-unstyled {
+        padding: 0px;
+    }
+    .sidemenu__btn {
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+    .button-app {
+        text-align: right;
+    }
+    .me-2 {
+        margin-left: 0.5rem;
+    }
+    .grid__nav.toggled .sidebar_list__item_link__arrow {
+        left: 0;
+        right: auto;
+    }
+    .sidebar_list_child .sidebar_list_child__item {
+        padding-left: 0;
+        padding-right: 34px;
+    }
+    .sidebar_list_child .sidebar_list_child__item .sidebar_list_child__item_link {
+        border-right: 2px solid #d8dbdd;
+        border-left: 0px;
+    }
+    .sidebar_list_child .sidebar_list_child__item .sidebar_list_child__item_link.nuxt-link-active {
+        border-right: 2px solid var(--base_color);
+    }
+    .switchVisibility {
+        right: auto !important;
+        left: 10px !important;
+    }
+}
+
+
+.chooseToggleTheme {
+	background-color: #e2e7eb;
+    padding: 0.5rem 0.9rem;
+    @include border-radius();
+}
+
+input[type=text] {
+    -webkit-appearance: none;
+}

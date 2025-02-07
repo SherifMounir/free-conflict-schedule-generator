@@ -1,0 +1,43 @@
+{
+    "messageAlert": {
+        "areYou": "are you sure?",
+        "alertDelete": "do you really want to delete these records? this process cannot be undone",
+        "success": "Success",
+        "confirmButton": "Confirm",
+        "deleteButton": "Delete",
+        "canncelButton": "Cancel",
+        "ok": "Ok"
+    },
+    "pages": {
+        "statistics": {
+            "pageName": "statistics"
+        },
+        "user-management": {
+            "pageName": "user management"
+        },
+        "permissions": {
+            "pageName": "permissions"
+        },
+        "add-permissions": {
+            "pageName": "Add Permissions"
+        },
+        "users": {
+            "pageName": "users"
+        },
+        "edit-user": {
+            "pageName": "edit users"
+        },
+        "order-management": {
+            "pageName": "order management"
+        },
+        "inventory-management": {
+            "pageName": "inventory management"
+        },
+        "asset-management": {
+            "pageName": "asset management"
+        },
+        "rig-management": {
+            "pageName": "Rig Management"
+        }
+    }
+}

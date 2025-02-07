@@ -1,0 +1,55 @@
+[Student]
+- ID: int
+- Name: string
+- Email: string
+- Password: string
+- GPA: float
+- Level: int
++ inputPreferences(preferences: List)
++ inputCourses(courses: List)
++ viewSchedule() :: Schedule
++ acceptSchedule() :: Schedule
+
+[Course]
+- Code: string
+- Name: string
+- CreditHours: int
+- SlotsAvailable: int
+- Type: string
+- Room: string
+- Instructor: string
++ updateAvailability(count: int)
+
+[Prerequisite]
+- CourseCode: string
+- PrerequisiteCode: string
+
+[Session]
+- SessionID: int
+- CourseCode: string
+- Day: string
+- StartTime: string
+- EndTime: string
+- Instructor: string
+- Room: string
+- Type: string
++ fetchAvailableSessions()
+
+[Schedule]
+- ID: int
+- Student: Student
+- Courses: List<Course>
+- Timeslots: Map
++ generateSchedule(student: Student, preferences: List) :: Schedule
+
+[Database]
++ saveSchedule(schedule: Schedule)
++ updateCourse(course: Course)
+
+Relationships:
+- Student "1" -- "*" Schedule
+- Schedule "1" -- "*" Course
+- Course "1" -- "*" Prerequisite
+- Course "1" -- "*" Session
+- Schedule "1" -- "*" Timeslots
+

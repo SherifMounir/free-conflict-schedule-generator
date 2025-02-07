@@ -1,0 +1,31 @@
+.modal-content {
+    border-radius: 0px;
+    background-color: var(--block_content_color);
+    .modal-header {
+        justify-content: space-between;
+        border-radius: 0px;
+        background-color: var(--default_color);
+        border-bottom-color: var(--gray_color_2);
+        color: #fff;
+        .modal-title {
+            font-size: 13px;
+        }
+        .close {
+            background-color: transparent;
+            color: #fff;
+            border: 0px;
+        }
+    }
+    .modal-body {
+        .d-block {
+            h6 {
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+.swal2-popup {
+    background-color: var(--block_content_color) !important;
+    color: var(--data_menu_color) !important;
+}

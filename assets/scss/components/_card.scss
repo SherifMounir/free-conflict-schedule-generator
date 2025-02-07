@@ -1,0 +1,100 @@
+.custom-card {
+    padding: 1rem;
+    background-color: var(--main-block-color);
+    @include border-radius();
+    position: relative;
+    width: 100%;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 6px;
+        background-color: var(--base_color);
+        top: -2px;
+        right: 20px;
+        @include border-radius();
+    }
+    .spinner-border {
+        color: var(--base_color);
+    }
+}
+    .card_link {
+        transition: all;
+        .custom-card {
+            transition: all;
+
+            &:hover {
+                background-color: #ebeff2  !important;
+                transition: 0.3ms;
+
+            }
+        }
+        
+    }
+    .cat_page {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        position: relative;
+        padding: 1px;
+        background-color: transparent;
+    }
+    .cat_page__icon {
+        background-color: #e2e7eb;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 35px;
+        height: 36px;
+    }
+    .cat_page_name {
+        text-transform: capitalize;
+    }
+    .loader-page {
+        background: rgb(255 255 255 / 93%);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        @include border-radius();
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .main-page-dashboard {
+        margin-top: 15px;
+    }
+
+
+    .child-route {
+        color: #000 !important;
+        text-decoration: none;
+        text-transform: capitalize;
+        .custom-card {
+            .child-route__icon {
+                background-color: #e2e7eb;
+                width: 40px;
+                height: 40px;
+                @include border-radius();
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &:hover {
+                background-color: rgb(223 231 237);
+                .child-route__icon {
+                    background-color: var(--base_color);
+                    color: #fff;
+                }
+            }
+        }
+    
+        
+    }
+
