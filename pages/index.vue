@@ -130,45 +130,57 @@ export default {
 
         });
     },
-    async loginAccount() {
-      this.incorrectAuth = null
-      try {
-    // Send login request to the backend
+   async loginAccount() {
+  this.incorrectAuth = null;
+  try {
+    if (this.email === "demo@msa.edu.eg" && this.password === "123456") {
+      const demoUserData = {
+        name: "Demo User",
+        email: this.email,
+        level: "Senior",
+        gpa: 3.8,
+        id: 999,
+        demo: true
+      };
+
+      localStorage.setItem("userData", JSON.stringify(demoUserData));
+      this.errorMessage = "";
+      this.successMessage = "Demo login successful! Redirecting...";
+
+      console.log("Logged in as demo user:", demoUserData);
+
+      setTimeout(() => {
+        this.$router.push(this.localePath({ path: "/dashboard/home" }));
+      }, 1500);
+
+      return; // Stop further execution
+    }
+
     const response = await this.$axios.post("http://localhost:5000/api/login", {
       email: this.email,
       password: this.password,
     });
 
-    // Log the response for debugging
     console.log("Login Response:", response.data);
 
-    // Handle errors from the backend
     if (response.data.error) {
-      this.errorMessage = response.data.error; // Show error message
-      this.successMessage = ""; // Clear success message
+      this.errorMessage = response.data.error;
+      this.successMessage = "";
     } else {
-      // Clear any previous error messages
       this.errorMessage = "";
       this.successMessage = "Login successful! Redirecting...";
-
-      // Save user data in localStorage
       localStorage.setItem("userData", JSON.stringify(response.data));
 
-      // Debug saved user data
-      console.log("Saved user data:", localStorage.getItem("userData"));
-
-      // Redirect to the home/dashboard page
       setTimeout(() => {
         this.$router.push(this.localePath({ path: "/dashboard/home" }));
-      }, 1500); // Wait for 1.5 seconds before redirecting
+      }, 1500);
     }
   } catch (error) {
-    // Log errors for debugging
     console.error("Login Error:", error.response?.data || error);
-
-    // Show error message to the user
     this.errorMessage = error.response?.data?.error || "Login failed. Please try again.";
   }
+
+  
 
     },
     switchVisibility () {
