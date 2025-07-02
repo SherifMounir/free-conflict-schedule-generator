@@ -88,6 +88,14 @@ def enroll_student(student_id, course_code, semester = SEMESTER):
         return {"error": f"Error enrolling student: {e}"}
 
 def login_student(email, password):
+    # Bypass actual DB login for demo purposes
+    if email == "demo@aucegypt.edu" and password == "123456":
+        return {
+            "gpa": 3.9,
+            "level": "Senior",
+            "name": "Demo Student",
+            "id": 9999
+        }
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
