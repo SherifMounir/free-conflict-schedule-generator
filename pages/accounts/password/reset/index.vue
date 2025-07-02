@@ -1,3 +1,4 @@
+<template>
 <form @submit.prevent="handleSubmit(onSubmit)">
   <div class="col-12 pb-3">
     <ValidationProvider
@@ -45,6 +46,7 @@
     </div>
   </div>
 </form>
+</template>
 
   <script>
 import { mapActions } from "vuex";
