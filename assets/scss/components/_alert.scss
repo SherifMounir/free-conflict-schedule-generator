@@ -50,7 +50,7 @@
 .alert-success {
     color: #4F8A10;
     background-color: #DFF2BF;
-    border: 1px solid darken(#DFF2BF, 15%);
+    border: 1px solid color.scale(#DFF2BF, $lightness: -15%);
 }
 
 .alert-success:before {
