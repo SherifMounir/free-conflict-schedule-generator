@@ -88,6 +88,12 @@ CREATE TABLE IF NOT EXISTS enrolled_in (
     FOREIGN KEY (s_id) REFERENCES student (s_id) ON DELETE CASCADE,
     FOREIGN KEY (c_code) REFERENCES course (c_code) ON DELETE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS student_schedule (
+    s_id INTEGER NOT NULL,
+    schedule_schema JSON NOT NULL,
+    FOREIGN KEY (s_id) REFERENCES student (s_id) ON DELETE CASCADE
+);
 """
 cursor.executescript(schema)
 conn.commit()

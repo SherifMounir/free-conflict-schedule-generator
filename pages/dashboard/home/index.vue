@@ -5,9 +5,10 @@
         <UiCard class="h-100">
           <UiCardName :cardName="`Home`" />
           <div class="text-center mt-3">
-            <h1>Welcome </h1>
-            <p>Your GPA is </p>
-            <p>You are currently at level </p>
+            <h1>Welcome {{ userName }} </h1>
+            <h1>your Id {{ userId }} </h1>
+            <p>Your GPA is {{ userGPA }} </p>
+            <p>You are currently at level {{ userLevel }} </p>
           </div>
         </UiCard>
       </div>
@@ -22,6 +23,7 @@ export default {
       userName: null,
       userGPA: null,
       userLevel: null,
+      userId: null,
     };
   },
   mounted() {
@@ -30,6 +32,7 @@ export default {
       this.userName = userData.name;
       this.userGPA = userData.gpa;
       this.userLevel = userData.level;
+      this.userId = userData.id;
     }
   },
 };

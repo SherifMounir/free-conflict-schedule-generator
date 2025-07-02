@@ -56,7 +56,9 @@ export default {
     "~/plugins/mixin.js",
     "~/plugins/vue-json-viewer.js",
     "~/plugins/datetime.js",
-    "~/plugins/chart.js"
+    "~/plugins/chart.js",
+    "~/plugins/toast.js"
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

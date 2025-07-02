@@ -134,7 +134,7 @@ export default {
       this.incorrectAuth = null
       try {
     // Send login request to the backend
-    const response = await this.$axios.post("http://localhost:8000/api/login", {
+    const response = await this.$axios.post("http://localhost:5000/api/login", {
       email: this.email,
       password: this.password,
     });
