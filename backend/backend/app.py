@@ -90,7 +90,7 @@ def do_generate_schedule():
 @app.post("/api/login")
 def login():
     data=request.get_json()
-    if data["email"] == "demo@aucegypt.edu" and data["password"] == "123456":
+    if data["email"] == "demo@msa.edu.eg" and data["password"] == "123456":
         return {
             "gpa": 3.9,
             "level": "Senior",

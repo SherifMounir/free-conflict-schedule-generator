@@ -89,7 +89,7 @@ def enroll_student(student_id, course_code, semester = SEMESTER):
 
 def login_student(email, password):
     # Bypass actual DB login for demo purposes
-    if email == "demo@aucegypt.edu" and password == "123456":
+    if email == "demo@msa.edu.eg" and password == "123456":
         return {
             "gpa": 3.9,
             "level": "Senior",
