@@ -1,61 +1,62 @@
+@use "sass:color";
+
 .alert {
-    margin: 0px 0px;
-    padding: 12px;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  margin: 0px 0px;
+  padding: 12px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .alert:before {
-    padding-right: 12px;
+  padding-right: 12px;
 }
 
 .alert-info {
-    color: #00529B;
-    background-color: #BDE5F8;
-    border: 1px solid darken(#BDE5F8, 15%);
+  color: #00529B;
+  background-color: #BDE5F8;
+  border: 1px solid color.scale(#BDE5F8, $lightness: -15%);
 }
 
 .alert-info:before {
-    content: '\f05a';
-    font-family: bootstrap-icons !important;
+  content: '\f05a';
+  font-family: bootstrap-icons !important;
 }
 
 .alert-warn {
-    color: #9F6000;
-    background-color: #FEEFB3;
-    border: 1px solid darken(#FEEFB3, 15%);
+  color: #9F6000;
+  background-color: #FEEFB3;
+  border: 1px solid color.scale(#FEEFB3, $lightness: -15%);
 }
 
 .alert-warn:before {
-    content: '\f071';
-    font-family: bootstrap-icons !important;
+  content: '\f071';
+  font-family: bootstrap-icons !important;
 }
 
 .alert-danger {
-    color: var(--danger_color);
-    background-color: #FFBABA;
-    border: 1px solid darken(#FFBABA, 15%);
-    
+  color: var(--danger_color);
+  background-color: #FFBABA;
+  border: 1px solid color.scale(#FFBABA, $lightness: -15%);
 }
 
 .alert-danger:before {
-    content: '\F622';
-    font-family: bootstrap-icons !important;
+  content: '\F622';
+  font-family: bootstrap-icons !important;
 }
 
 .alert-success {
-    color: #4F8A10;
-    background-color: #DFF2BF;
-    border: 1px solid color.scale(#DFF2BF, $lightness: -15%);
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  border: 1px solid color.scale(#DFF2BF, $lightness: -15%);
 }
 
 .alert-success:before {
-    content: '\F26B';
-    font-family: bootstrap-icons !important;
+  content: '\F26B';
+  font-family: bootstrap-icons !important;
 }
 
 .swal2-popup {
